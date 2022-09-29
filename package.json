@@ -1,0 +1,63 @@
+{
+  "name": "lazycat-ui-dev",
+  "version": "0.0.16",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/lazycat-ui-dev.es.ts",
+  "main": "./dist/lazycat-ui-dev.umd.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/lazycat-ui-dev.es.ts",
+      "require": "./dist/lazycat-ui-dev.umd.ts"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "private": false,
+  "packageManager": "pnpm@7.4.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --port 3333 --open",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "test": "vitest",
+    "prepublishOnly": "vite build",
+    "docs": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
+  },
+  "dependencies": {
+    "@algolia/client-search": "^4.14.2",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@types/node": "^18.6.1",
+    "@unocss/reset": "^0.44.7",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "@vue/test-utils": "^2.0.2",
+    "eslint": "^8.20.0",
+    "jsdom": "^20.0.0",
+    "pnpm": "^7.6.0",
+    "taze": "^0.7.6",
+    "typescript": "^4.7.4",
+    "unocss": "^0.44.7",
+    "vite": "^3.0.3",
+    "vitepress": "^0.22.4",
+    "vitest": "^0.19.1",
+    "vue-tsc": "^0.39.0"
+  },
+  "prettier": {
+    "bracketSameLine": true,
+    "vueIndentScriptAndStyle": false,
+    "htmlWhitespaceSensitivity": "ignore",
+    "semi": false
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  }
+}
